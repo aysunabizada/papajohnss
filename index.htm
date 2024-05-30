@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza(fake) | Pizzalar | Pizza sifarişi | Pizzaların çatdırılması | *7272</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="background" onclick="goBasket()"></div>
+        <div id="basket">
+            <i class="fa-solid fa-circle-xmark" onclick="goBasket()"></i>
+            <h2>Səbət</h2>
+            <p>Səbətinizdəki məhsul sayı: <span class="sebetsay">0 m</span></p> 
+            <div class="yemekler p20">
+                menim icimde yimaxlar olacaq
+            </div>
+            <div class="btns df">
+                <button onclick="show('Pizzalar',this), goBasket()">Menyuya Keçin</button>
+                <h4>Ümumi məbləğ: <span class="sebetqiymet">0 m</span></h4>
+            </div>
+        </div>
+        <div class="background2" onclick="bunuSec()"></div>
+        <div class="bunusec">
+
+        </div>
+        <header>
+            <nav>
+                <div class="nav-top container">
+                    <a href="index.htm"><img src="img/favicon.png" alt="" id="logo-mobil"></a>
+                    <div class="lang txtcenter">
+                        <img src="img/flag_az.png" alt="" id="flag">
+                        <p>AZ</p>
+                    </div>
+                    <div class="login txtcenter">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Giriş</p>
+                    </div>
+                    <div class="sebet txtcenter">
+                        <span class="sebetsay">0</span>
+                        <a href="#" onclick="goBasket()" class="fa-solid fa-basket-shopping"></a>
+                        <p class="sebetqiymet">0 ₼</p>
+                    </div>
+                </div>
+                <div class="nav-top-desk container">
+                    <div class="ntd-left">
+                        <a href="">Restoranlar</a>
+                        <a onclick="show('Bonus')">PapaBonus</a>
+                    </div>
+                    <div class="ntd-right">
+                        <div class="lang" id="drp">
+                            <img src="img/flag_az.png" alt="" id="flag">
+                            <span>Azərbaycanca ▼</span>
+                            <div class="down">
+                                <div class="lang">
+                                    <a href="https://www.papajohns.az/en/papabonus">
+                                        <img src="img/flag_en.png" alt="" id="flag">
+                                        <span>English</span>
+                                    </a>
+                                </div>
+                                <div class="lang">
+                                    <a href="https://www.papajohns.az/ru/papabonus">
+                                        <img src="img/flag_ru.png" alt="" id="flag">
+                                        <span>Русский</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="">Giriş/Qeydiyyat</a>
+                        <div class="sebet">
+                            <span class="sebetsay">0</span>
+                            <a href="#" onclick="goBasket()" class="fa-solid fa-basket-shopping"></a>
+                            <p class="sebetqiymet">0 ₼</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-bottom">
+                    <div class="container">
+                        <a id="logmob" href="index.htm"><img src="img/pj_logo_web_new.png" alt="PapaJhons-Logo"></a>
+                        <div class="nb-list">
+                            <ul>
+                                <li class="link" onclick="getKampaniya()"><a>kampaniyalar</a></li>
+                                <li class="link" onclick="show('Papadias')"><a>papadias</a></li>
+                                <li class="link" onclick="show('Pizzalar')"><a>pizza</a></li>
+                                <li class="link" onclick="show('Qəlyənaltı')"><a>qəlyənaltı</a></li>
+                                <li class="link" onclick="show('Salat')"><a>salat</a></li>
+                                <li class="link" onclick="show('Pasta')"><a>pasta</a></li>
+                                <li class="link" onclick="show('İçki')"><a>içki</a></li>
+                                <li class="link" onclick="show('Desert')"><a>desert</a></li>
+                                <li class="link" onclick="show('Sous')"><a>sous</a></li>
+                            </ul> 
+                            <div class="bal txtwhite">
+                                <span onclick="show('Bonus')">0 bal  <span id="sual"> ? </span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="promokod container">
+            <p>Promo kodunuz var?</p>
+            <span>Endirimdən istifadə edin!</span>
+            <input type="text" id="prokod" placeholder="Promo kodu daxil edin">
+            <button onclick="getPromokod()">OK</button>
+        </div>
+        
+        <div class="bonus container">
+            <div class="content">
+                <img src="img/bonuslogo.png" alt="PapaBonus Logo">
+                <p>Sizin üçün möhtəşəm bonus proqramımız var. Bu proqram sayəsində Siz saytımızdan əldə etdiyiniz məhsullara görə ballar alacaq və bu ballarla bizdən hədiyyə ala biləcəksiniz.</p>
+                <button>Daxil olmaq</button>
+            </div>
+        </div>
+        <div class="pizzaCategory ">
+            <ul>
+                <li><a>Hamısı</a></li>
+                <li><a>Toyuqlu</a></li>
+                <li><a>Ət ilə</a></li>
+                <li><a>Vegetarian</a></li>
+                <li><a>Acılı</a></li>
+            </ul>
+        </div>
+        <div class="message txtcenter">
+
+        </div>
+        <main>
+            <div class="cards">
+
+            </div>
+            <div class="swiper mySwiper" id="zehrimar">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide1"></div>
+                    <div class="swiper-slide" id="slide2"></div>
+                    <div class="swiper-slide" id="slide3"></div>
+                    <div class="swiper-slide" id="slide4"></div>
+                    <div class="swiper-slide" id="slide5"></div>
+                    <div class="swiper-slide" id="slide6"></div>
+                    <div class="swiper-slide" id="slide7"></div>
+                    <div class="swiper-slide" id="slide8"></div>
+                    <div class="swiper-slide" id="slide9"></div>
+                    <div class="swiper-slide" id="slide10"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="mobil-f">
+                <div class="mobil-footer p20">
+                    <div class="mf-left">
+                        <ul>
+                            <li><a href="">Haqqımızda</a></li>
+                            <li><a href="">Sual-cavab</a></li>
+                            <li><a href="">Karyera</a></li>
+                            <li><a href="">Xəmir</a></li>
+                            <li><a href="">Papa Talk - Şərtlər<br> və Qaydalar</a></li>
+                        </ul>
+                    </div>
+                    <div class="mf-right">
+                        <ul>
+                            <li><a href="">Restoranlar</a></li>
+                            <li><a href="">Kampaniyalar</a></li>
+                            <li><a onclick="show('Bonus')">PapaBonus</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="tel://*7272" id="tel"></a>
+                <div class="icons p20">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+                <div class="copy txtcenter">© PJA 2024</div>
+            </div>
+            <div class="desk-f">
+                <div class="container">
+                    <div class="df">
+                        <div class="copy">© PJA 2024</div>
+                        <ul>
+                            <li><a href="">Haqqımızda</a></li>
+                            <li><a href="">Sual-cavab</a></li>
+                            <li><a href="">Karyera</a></li>
+                            <li><a href="">Xəmir</a></li>
+                            <li><a href="">Papa Talk - Şərtlər</a></li>
+                        </ul>
+                    </div>
+                    <div class="df">
+                        <a href="tel://*7272" id="tel"></a>
+                        <div class="icons p20">
+                            <a href="" class="fa-brands fa-facebook-f"></a>
+                            <a href="" class="fa-brands fa-twitter"></a>
+                            <a href="" class="fa-brands fa-instagram"></a>
+                            <a href="" class="fa-brands fa-discord"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="scripttt.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 'auto',
+                breakpoints :{
+                    768:{
+                        sliderPerView: 1.3
+                    }
+                },
+                centeredSlides: true,
+                spaceBetween: 30,
+                Loop: true,
+                autoplay: {
+                    delay: 4000, 
+                    disableOnInteraction: false, 
+                    },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>
